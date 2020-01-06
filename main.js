@@ -2,11 +2,11 @@ const btnMenu = document.querySelector('.btn-burger');
 
 
 const classMenu = () => {
-    const btnMenuSpan=document.querySelectorAll('.burger span');
+    const btnMenuSpan = document.querySelectorAll('.burger span');
     const leftMenu = document.querySelector('.left-navbar');
     leftMenu.classList.toggle('active');
-  btnMenuSpan[0].classList.toggle('active');
-  btnMenuSpan[1].classList.toggle('active');
+    btnMenuSpan[0].classList.toggle('active');
+    btnMenuSpan[1].classList.toggle('active');
 }
 
 document.querySelector('.burger').addEventListener('click', classMenu);
@@ -53,3 +53,17 @@ navElements.forEach(function (element2) {
 
     );
 });
+
+const aboutMask = document.querySelector('.mask');
+const aboutContent = document.querySelector('.about-me__content');
+
+const aboutBounce = () => {
+    aboutContent.classList.add('bounce');
+    console.log('mouse')
+}
+const aboutBounceRemove = () => {
+    aboutContent.classList.remove('bounce');
+}
+
+document.querySelector('.mask').addEventListener('mouseenter', aboutBounce)
+document.querySelector('.mask').addEventListener('mouseleave', aboutBounceRemove)
