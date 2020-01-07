@@ -5,8 +5,8 @@ const classMenu = () => {
     const btnMenuSpan = document.querySelectorAll('.burger span');
     const leftMenu = document.querySelector('.left-navbar');
     leftMenu.classList.toggle('active');
-    btnMenuSpan[0].classList.toggle('active');
-    btnMenuSpan[1].classList.toggle('active');
+    for(let i=0;i<btnMenuSpan.length;i++)
+    btnMenuSpan[i].classList.toggle('active');
 }
 
 document.querySelector('.burger').addEventListener('click', classMenu);
@@ -20,7 +20,6 @@ window.onscroll = () => {
         nav.classList.add('nav-active');
         burger.classList.add('bounce');
     } else {
-        this.console.log('Nie');
         nav.classList.remove('nav-active')
         burger.classList.remove('bounce');
     }
