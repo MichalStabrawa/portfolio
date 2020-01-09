@@ -207,6 +207,16 @@ body {
   height: 100%;
 }
 
+@media (max-width: 767px) {
+  .main-header__wrapper {
+    padding: 70px 0;
+    justify-content: flex-start;
+  }
+  .main-header__wrapper .btn {
+    background: #000;
+  }
+}
+
 .about {
   height: 250px;
   margin-top: 15px;
