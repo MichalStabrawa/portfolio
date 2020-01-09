@@ -358,6 +358,11 @@ body {
         width: 50%;
         margin: 0;
 
+        @include media-small{
+            font-size: 22px;
+            
+        }
+
         &::after {
             content: '';
             position: absolute;

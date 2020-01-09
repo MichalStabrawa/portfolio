@@ -317,6 +317,12 @@ body {
   margin: 0;
 }
 
+@media (max-width: 575px) {
+  .cards__content {
+    font-size: 22px;
+  }
+}
+
 .cards__content::after {
   content: '';
   position: absolute;
