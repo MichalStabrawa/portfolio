@@ -117,6 +117,18 @@ $blue:#47b8e2;
     justify-content: center;
 }
 
+@mixin media-small{
+    @media(max-width: 575px) {
+        @content;
+    }
+}
+
+@mixin media-tablet{
+    @media(max-width: 767px) {
+        @content;
+    }
+}
+
 
 body {
     box-sizing: border-box;
@@ -287,10 +299,18 @@ body {
 
     &__item:nth-child(odd) {
         padding-right: 7.5px;
+
+        @include media-tablet {
+            padding-right: 15px;
+        }
+
     }
 
     &__item:nth-child(even) {
         padding-left: 7.5px;
+        @include media-tablet {
+            padding-left: 15px;
+        }
     }
 
     figure {
@@ -346,6 +366,11 @@ body {
     height: 180px;
     background: $blue;
 
+    @include media-tablet{
+height: auto;
+padding: 15px 0;
+    }
+
     .container-fluid {
         height: 100%;
 
@@ -396,6 +421,11 @@ body {
 
     .first-col {
         justify-content: space-between;
+
+        @include media-tablet{
+            margin-bottom: 15px;
+            flex-direction: column;
+        }
 
         .footer__social__contact {
             .fa {

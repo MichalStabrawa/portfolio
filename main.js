@@ -64,5 +64,13 @@ const aboutBounceRemove = () => {
     aboutContent.classList.remove('bounce');
 }
 
-document.querySelector('.mask').addEventListener('mouseenter', aboutBounce)
-document.querySelector('.mask').addEventListener('mouseleave', aboutBounceRemove)
+aboutMask.addEventListener('mouseenter', aboutBounce);
+document.querySelector('.mask').addEventListener('mouseleave', aboutBounceRemove);
+
+const headerBounce=(e)=> {
+e.classList.add('.bounce')
+console.log(e.target)
+}
+
+
+headerBounce(document.querySelector('h1'))
