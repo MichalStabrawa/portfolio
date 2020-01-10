@@ -108,6 +108,11 @@ body {
   padding: 0;
 }
 
+.btn {
+  min-width: 200px;
+  margin-top: 10px;
+}
+
 .left-navbar {
   height: 100vh;
   width: 300px;
@@ -191,6 +196,10 @@ body {
   color: #fff;
 }
 
+.main-header .btn {
+  margin-top: 10px;
+}
+
 .main-header .container-fluid {
   height: 100%;
 }
@@ -211,9 +220,10 @@ body {
   .main-header__wrapper {
     padding: 70px 0;
     justify-content: flex-start;
+    align-items: center;
   }
   .main-header__wrapper .btn {
-    background: #000;
+    background-color: rgba(0, 0, 0, 0.9);
   }
 }
 
@@ -233,6 +243,11 @@ body {
   align-items: center;
   background: #47b8e2;
   color: #fff;
+  justify-content: center;
+}
+
+.about__content__title {
+  text-align: center;
 }
 
 .cards {

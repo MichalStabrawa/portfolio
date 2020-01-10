@@ -137,6 +137,11 @@ body {
 
 }
 
+.btn {
+    min-width: 200px;
+    margin-top: 10px;
+}
+
 
 .left-navbar {
     height: 100vh;
@@ -227,6 +232,10 @@ body {
     background-size: cover;
     color: #fff;
 
+    .btn {
+        margin-top:10px;
+    }
+
 
     .container-fluid {
         height: 100%;
@@ -244,9 +253,10 @@ body {
         @include media-tablet {
             padding: 70px 0;
             justify-content: flex-start;
+            align-items: center;
 
             .btn {
-                background: $black;
+               background-color: rgba(0, 0, 0, 0.9);
             }
         }
 
@@ -269,6 +279,13 @@ body {
         align-items: center;
         background: $blue;
         color: $white;
+        justify-content: center;
+
+        &__title {
+            text-align: center;
+        }
+
+
 
     }
 }
