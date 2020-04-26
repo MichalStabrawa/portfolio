@@ -110,7 +110,9 @@ body {
 
 .btn {
   min-width: 200px;
-  margin-top: 10px;
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .left-navbar {
@@ -433,6 +435,10 @@ body {
   color: #fff;
 }
 
+.jumbotron .lead {
+  width: 50%;
+}
+
 .about-me__first {
   display: flex;
   justify-content: center;
@@ -497,6 +503,43 @@ body {
 /*experience.html !!!!!!!!!!!!!!!!!!!*/
 .experience {
   margin-bottom: 15px;
+}
+
+.experience .container-fluid {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 15px;
+}
+
+.experience .container-fluid .grid-item {
+  border: 1px solid #47b8e2;
+  padding: 20px;
+}
+
+.experience .container-fluid .grid-item-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.experience .container-fluid .grid-item-wrapper figure {
+  display: flex;
+  align-items: center;
+}
+
+.experience .container-fluid .grid-item-wrapper figure img {
+  width: 200px;
+}
+
+.experience .container-fluid .grid-item-wrapper-content {
+  width: 60%;
+}
+
+.experience .container-fluid .grid-item-wrapper-content h2, .experience .container-fluid .grid-item-wrapper-content h4 {
+  margin-bottom: 20px;
+}
+
+.experience .container-fluid .grid-item-wrapper-content p {
+  font-size: 20px;
 }
 
 .experience__content {
@@ -585,4 +628,12 @@ body {
 
 .experience__content:nth-of-type(even)__content {
   background: red;
+}
+
+body .ms-theme-property {
+  color: "blue";
+}
+
+body .ms-theme-property-left {
+  color: "green";
 }

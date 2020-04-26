@@ -1,3 +1,5 @@
+
+
 @font-face {
     font-family: "icomoon";
     src: url("../fonts/icomoon.eot");
@@ -117,6 +119,19 @@ $blue:#47b8e2;
     justify-content: center;
 }
 
+$icons: ("property": "blue", "property-left": "green");
+
+@mixin theme() {
+
+    @each $name,
+    $glyph in $icons {
+        .ms-theme-#{$name} {
+            color: $glyph;
+
+        }
+    }
+}
+
 @mixin media-small {
     @media(max-width: 575px) {
         @content;
@@ -139,7 +154,10 @@ body {
 
 .btn {
     min-width: 200px;
-    margin-top: 10px;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+   
 }
 
 
@@ -233,7 +251,8 @@ body {
     color: #fff;
 
     .btn {
-        margin-top:10px;
+        margin-top: 10px;
+        
     }
 
 
@@ -256,7 +275,7 @@ body {
             align-items: center;
 
             .btn {
-               background-color: rgba(0, 0, 0, 0.9);
+                background-color: rgba(0, 0, 0, 0.9);
             }
         }
 
@@ -375,9 +394,9 @@ body {
         width: 50%;
         margin: 0;
 
-        @include media-small{
+        @include media-small {
             font-size: 22px;
-            
+
         }
 
         &::after {
@@ -467,8 +486,6 @@ body {
                 font-size: 32px;
             }
         }
-
-
     }
 }
 
@@ -477,6 +494,10 @@ body {
     margin-bottom: 15px;
     background-color: $blue;
     color: $white;
+
+    .lead {
+        width: 50%;
+    }
 }
 
 .about-me {
@@ -552,6 +573,44 @@ body {
 
 .experience {
     margin-bottom: 15px;
+
+    .container-fluid {
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 15px;
+
+        .grid-item {
+            border: 1px solid $blue;
+            padding: 20px;
+
+            &-wrapper {
+                display: flex;
+                justify-content: space-between;
+
+                figure {
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        width: 200px;
+                    }
+                }
+            
+
+                &-content {
+                    width: 60%;
+                    h2,h4 {
+                        margin-bottom: 20px;
+                    }
+                    p {
+                        font-size: 20px;
+                    }
+                }
+
+              
+            }
+        }
+    }
 
 
 
@@ -652,4 +711,9 @@ body {
             }
         }
     }
+}
+
+
+body {
+    @include theme()
 }

@@ -53,6 +53,21 @@ navElements.forEach(function (element2) {
     );
 });
 
+const linkActive = document.querySelectorAll('.menu-link');
+
+let tabLink =[];
+
+linkActive.forEach((item)=>{
+    
+    item.addEventListener('click',(e)=> {
+        
+    
+        tabLink=[];
+        tabLink.push(e.target.href)
+      console.log(e.target.href);
+    })
+})
+
 const aboutMask = document.querySelector('.mask');
 const aboutContent = document.querySelector('.about-me__content');
 
