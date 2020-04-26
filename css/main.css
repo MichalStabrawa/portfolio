@@ -439,6 +439,12 @@ body {
   width: 50%;
 }
 
+@media (max-width: 768px) {
+  .jumbotron .lead {
+    width: 100%;
+  }
+}
+
 .about-me__first {
   display: flex;
   justify-content: center;
@@ -647,6 +653,28 @@ body {
 
 .experience__content:nth-of-type(even)__content {
   background: red;
+}
+
+/*education*/
+.education .container-fluid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px 20px;
+}
+
+.education .container-fluid .grid-item .education-list li {
+  position: relative;
+  list-style-type: none;
+  margin-top: 40px;
+}
+
+.education .container-fluid .grid-item .education-list li::before {
+  content: "";
+  border: 2px solid red;
+  position: absolute;
+  display: inline-block;
+  height: 100%;
+  left: -40px;
 }
 
 body .ms-theme-property {

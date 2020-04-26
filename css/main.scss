@@ -495,6 +495,10 @@ body {
 
     .lead {
         width: 50%;
+
+        @media(max-width: 768px) {
+            width: 100%;
+        }
     }
 }
 
@@ -609,6 +613,7 @@ body {
                     @media(max-width:960px) {
                         width: 100%;
                     }
+
                     h2,
                     h4 {
                         margin-bottom: 20px;
@@ -722,6 +727,37 @@ body {
                 background: red;
             }
         }
+    }
+}
+
+/*education*/
+
+.education {
+    .container-fluid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px 20px;
+
+        .grid-item {
+            .education-list {
+                li {
+                    position: relative;
+                    list-style-type: none;
+                    margin-top: 40px;
+
+                    &::before {
+                        content: "";
+                        border: 2px solid red;
+                        position: absolute;
+                        display: inline-block;
+                        height: 100%;
+                        left: -40px;
+                    }
+                }
+            }
+        }
+
+
     }
 }
 
