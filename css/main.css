@@ -520,6 +520,7 @@ body {
 .experience .container-fluid .grid-item {
   border: 1px solid #47b8e2;
   padding: 20px;
+  background: red;
 }
 
 .experience .container-fluid .grid-item-wrapper {
@@ -675,6 +676,10 @@ body {
   display: inline-block;
   height: 100%;
   left: -40px;
+}
+
+.education .container-fluid .grid-item .education-list li.courses-list::before {
+  border-color: blue;
 }
 
 body .ms-theme-property {

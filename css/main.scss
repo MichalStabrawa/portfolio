@@ -626,6 +626,8 @@ body {
 
 
             }
+
+            background: red;
         }
     }
 
@@ -753,11 +755,16 @@ body {
                         height: 100%;
                         left: -40px;
                     }
+
+                    &.courses-list {
+                        &::before {
+                            border-color: blue;
+                        }
+                    }
                 }
             }
+
         }
-
-
     }
 }
 
