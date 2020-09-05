@@ -47,7 +47,7 @@
   speak: none;
 }
 
-.icon-github-square-brands:before {
+.icon-github-squae-rbrands:before {
   content: "\e904";
   font-family: "icomoon";
   speak: none;
@@ -97,6 +97,13 @@
 
 .icon-sass-brands:before {
   content: "\e90b";
+  font-family: "icomoon";
+  speak: none;
+  color: pink;
+}
+
+.icon-adobe-experience-manager-1:before {
+  content: "\e911";
   font-family: "icomoon";
   speak: none;
   color: pink;
