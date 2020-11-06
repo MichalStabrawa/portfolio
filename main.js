@@ -26,15 +26,15 @@ window.onscroll = () => {
 }
 
 
-const navElements = document.querySelectorAll('.cards__item');
+const navElements = document.querySelectorAll('.cards__item.main');
 //looping through each anchor element
 navElements.forEach(function (element) {
     //adding click event on each anchor element
     element.addEventListener('mouseenter', function (e) {
             //stop default behaviour
             e.preventDefault();
-            this.querySelector('button').style.opacity = '1';
-            this.querySelector('button').classList.add("mystyle");
+   
+            this.querySelector('.cards.main button.cards__item__btn').classList.add("mystyle");
         }
 
     );
@@ -45,8 +45,8 @@ navElements.forEach(function (element2) {
     element2.addEventListener('mouseleave', function (e) {
             //stop default behaviour
             e.preventDefault();
-            this.querySelector('button').style.opacity = '0';
-            this.querySelector('button').classList.remove("mystyle");
+        
+            this.querySelector('.cards.main button.cards__item__btn').classList.remove("mystyle");
 
         }
 
@@ -79,8 +79,8 @@ const aboutBounceRemove = () => {
     aboutContent.classList.remove('bounce');
 }
 
-aboutMask.addEventListener('mouseenter', aboutBounce);
-document.querySelector('.mask').addEventListener('mouseleave', aboutBounceRemove);
+//aboutMask.addEventListener('mouseenter', aboutBounce);
+//aboutMask.addEventListener('mouseleave', aboutBounceRemove);
 
 const headerBounce=(e)=> {
 e.classList.add('.bounce')
@@ -89,3 +89,5 @@ console.log(e.target)
 
 
 headerBounce(document.querySelector('h1'))
+
+console.log(window.location.href);

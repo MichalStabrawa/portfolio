@@ -290,6 +290,7 @@ body {
 .cards__item__btn.mystyle {
   right: 0;
   transition: 0.5s;
+  opacity: 1;
 }
 
 .cards__item:nth-child(odd) {
