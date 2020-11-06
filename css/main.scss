@@ -191,6 +191,10 @@ body {
         color: #fff;
         font-size: 22px;
         margin-bottom: 25px;
+
+        &.active {
+            color: $blue;
+        }
     }
 
 }
@@ -347,6 +351,7 @@ body {
             &.mystyle {
                 right: 0;
                 transition: 0.5s;
+                opacity:1;
             }
         }
 
