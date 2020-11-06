@@ -148,6 +148,10 @@ body {
   margin-bottom: 25px;
 }
 
+.left-navbar .menu-link.active {
+  color: #47b8e2;
+}
+
 .navbar-wrapper {
   height: 80px;
   width: 100%;

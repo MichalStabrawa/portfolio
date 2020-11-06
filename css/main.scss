@@ -191,6 +191,10 @@ body {
         color: #fff;
         font-size: 22px;
         margin-bottom: 25px;
+
+        &.active {
+            color: $blue;
+        }
     }
 
 }
