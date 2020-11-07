@@ -5,9 +5,12 @@ const startCounterHref = () => {
   navLinks.forEach(function (element) {
     if (element.getAttribute("href") == window.location.pathname) {
       element.classList.add("active");
-    } else {
-      element.classList.remove("active");
+    } else if(element.getAttribute("href")=== "/") {
+      element.classList.add("active");
     }
+    else {
+      element.classList.remove("active");
+    } 
   });
   console.log(`winow href = ${window.location.pathname}`);
 };
@@ -79,7 +82,7 @@ const aboutBounceRemove = () => {
 //aboutMask.addEventListener('mouseleave', aboutBounceRemove);
 
 const headerBounce = (e) => {
-  e.classList.add(".bounce");
+  e.classList.add("bounce");
   console.log(e.target);
 };
 
