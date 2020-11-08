@@ -1,9 +1,11 @@
 const btnMenu = document.querySelector(".btn-burger");
 const navLinks = document.querySelectorAll(".left-navbar .menu-link");
+const urlPath = window.location.pathname;
+const urlName = urlPath.slice(urlPath.lastIndexOf("/")+ 1);
 
 const startCounterHref = () => {
   navLinks.forEach(function (element) {
-    if (element.getAttribute("href") == window.location.pathname) {
+    if (element.getAttribute("href") == urlName) {
       element.classList.add("active");
     } else if(element.getAttribute("href")=== "/") {
       element.classList.add("active");
