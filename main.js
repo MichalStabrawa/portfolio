@@ -1,18 +1,17 @@
 const btnMenu = document.querySelector(".btn-burger");
 const navLinks = document.querySelectorAll(".left-navbar .menu-link");
 const urlPath = window.location.pathname;
-const urlName = urlPath.slice(urlPath.lastIndexOf("/")+ 1);
+const urlName = urlPath.slice(urlPath.lastIndexOf("/") + 1);
 
 const startCounterHref = () => {
   navLinks.forEach(function (element) {
     if (element.getAttribute("href") == urlName) {
       element.classList.add("active");
-    } else if(element.getAttribute("href")=== "/") {
+    } else if (element.getAttribute("href") === "/") {
       element.classList.add("active");
-    }
-    else {
+    } else {
       element.classList.remove("active");
-    } 
+    }
   });
   console.log(`winow href = ${window.location.pathname}`);
 };
@@ -90,4 +89,6 @@ const headerBounce = (e) => {
 
 headerBounce(document.querySelector("h1"));
 
-
+const testUrl =()=> {
+  console.log(`Last part url ${urlName}`);
+}
