@@ -1,3 +1,5 @@
+import {isMobile} from "./js/ismobile.js"
+
 const btnMenu = document.querySelector(".btn-burger");
 const navLinks = document.querySelectorAll(".left-navbar .menu-link");
 const urlPath = window.location.pathname;
@@ -32,7 +34,6 @@ window.onscroll = () => {
   let nav = document.querySelector(".navbar-wrapper");
   let burger = document.querySelector(".burger");
   if (window.pageYOffset > 100) {
-    this.console.log("Test");
     console.log(window.pageYOffset);
     nav.classList.add("nav-active");
     burger.classList.add("bounce");
@@ -92,3 +93,5 @@ headerBounce(document.querySelector("h1"));
 const testUrl =()=> {
   console.log(`Last part url ${urlName}`);
 }
+
+isMobile();
