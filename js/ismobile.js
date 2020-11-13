@@ -2,24 +2,24 @@ const phoneLink = document.querySelector("a.phone");
 
 const isMobile = () => {
   if (
-    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-      navigator.userAgent
-    )
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
   ) {
-      alert(navigator.userAgent);
+    return null;
   } else {
-    // false for not mobile device
-    console.log(phoneLink);
-    linkPrevDefault(phoneLink);
+    
+    handleEvent(phoneLink,'click',phonePrevent);
   }
 };
 
-const phonePrevent = (event) => {
-  event.preventDefault();
+const phonePrevent = (e) => {
+  e.preventDefault();
+  alert('Dziala');
 };
 
-const linkPrevDefault = (e) => {
-  e.addEventListener("click", phonePrevent);
+const handleEvent = (element,event,value) => {
+  element.addEventListener(event, value);
 };
 
-export { isMobile };
+export {
+  isMobile,handleEvent
+};

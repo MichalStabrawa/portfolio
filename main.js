@@ -1,6 +1,6 @@
-import {isMobile} from "./js/ismobile.js"
+import {isMobile,handleEvent} from "./js/ismobile.js"
 
-const btnMenu = document.querySelector(".btn-burger");
+const btnMenu = document.querySelector(".burger");
 const navLinks = document.querySelectorAll(".left-navbar .menu-link");
 const urlPath = window.location.pathname;
 const urlName = urlPath.slice(urlPath.lastIndexOf("/") + 1);
@@ -15,8 +15,7 @@ const startCounterHref = () => {
       element.classList.remove("active");
     }
   });
-  console.log(`winow href = ${window.location.pathname}`);
-};
+ };
 
 startCounterHref();
 
@@ -24,22 +23,23 @@ const classMenu = () => {
   const btnMenuSpan = document.querySelectorAll(".burger span");
   const leftMenu = document.querySelector(".left-navbar");
   leftMenu.classList.toggle("active");
+
   for (let i = 0; i < btnMenuSpan.length; i++)
     btnMenuSpan[i].classList.toggle("active");
 };
 
-document.querySelector(".burger").addEventListener("click", classMenu);
+handleEvent(btnMenu,'click',classMenu);
 
 window.onscroll = () => {
   let nav = document.querySelector(".navbar-wrapper");
-  let burger = document.querySelector(".burger");
+ 
   if (window.pageYOffset > 100) {
     console.log(window.pageYOffset);
     nav.classList.add("nav-active");
-    burger.classList.add("bounce");
+    btnMenu.classList.add("bounce");
   } else {
     nav.classList.remove("nav-active");
-    burger.classList.remove("bounce");
+    btnMenu.classList.remove("bounce");
   }
 };
 
