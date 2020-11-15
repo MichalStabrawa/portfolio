@@ -1,7 +1,4 @@
-import {
-  isMobile,
-  handleEvent
-} from "./js/ismobile.js";
+import {isMobile,handleEvent} from "./js/ismobile.js";
 import AddClass from "./js/addclass.js";
 
 const btnMenu = document.querySelector(".burger");
@@ -54,19 +51,19 @@ const navElements = document.querySelectorAll(".cards__item.main");
 //looping through each anchor element
 navElements.forEach(function (element) {
   //adding click event on each anchor element
-  element.addEventListener("mouseenter", function (e) {
+ handleEvent(element, 'mouseenter', function (e) {
     //stop default behaviour
     e.preventDefault();
 
     this.querySelector(".cards.main button.cards__item__btn").classList.add(
       "mystyle"
     );
-  });
+  })
 });
 
 navElements.forEach(function (element2) {
   //adding click event on each anchor element
-  element2.addEventListener("mouseleave", function (e) {
+  handleEvent(element2,'mouseleave', function (e) {
     //stop default behaviour
     e.preventDefault();
 
@@ -98,12 +95,11 @@ headerBounce(document.querySelector("h1"));
 
 isMobile();
 
+//show & hide modal contact
 
-
-//show modal contact
-const modalHandle=()=> {
-  const aClass = new AddClass(modal, 'active'); 
-  aClass.checkClass()
+const modalHandle =()=> {
+  const useModalClass = new AddClass(modal, 'active'); 
+  useModalClass.checkClass()
 }
 
 handleEvent(btnContact, 'click', modalHandle);
