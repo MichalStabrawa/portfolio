@@ -740,6 +740,11 @@ body {
   border-left: none;
 }
 
+/*modal----------------!!!!*/
+.modal.active {
+  display: block;
+}
+
 body .ms-theme-property {
   color: "blue";
 }
