@@ -23,3 +23,4 @@ const handleEvent = (element,event,value) => {
 export {
   isMobile,handleEvent
 };
+
