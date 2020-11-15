@@ -1,7 +1,14 @@
-import {isMobile,handleEvent} from "./js/ismobile.js"
+import {
+  isMobile,
+  handleEvent
+} from "./js/ismobile.js";
+import AddClass from "./js/addclass.js";
 
 const btnMenu = document.querySelector(".burger");
+const btnContact = document.querySelector('.btn-contact');
 const navLinks = document.querySelectorAll(".left-navbar .menu-link");
+const modal = document.querySelector('.modal');
+const btnClose = document.querySelector('.close');
 const urlPath = window.location.pathname;
 const urlName = urlPath.slice(urlPath.lastIndexOf("/") + 1);
 
@@ -15,7 +22,7 @@ const startCounterHref = () => {
       element.classList.remove("active");
     }
   });
- };
+};
 
 startCounterHref();
 
@@ -28,11 +35,11 @@ const classMenu = () => {
     btnMenuSpan[i].classList.toggle("active");
 };
 
-handleEvent(btnMenu,'click',classMenu);
+handleEvent(btnMenu, 'click', classMenu);
 
 window.onscroll = () => {
   let nav = document.querySelector(".navbar-wrapper");
- 
+
   if (window.pageYOffset > 100) {
     console.log(window.pageYOffset);
     nav.classList.add("nav-active");
@@ -85,13 +92,19 @@ const aboutBounceRemove = () => {
 
 const headerBounce = (e) => {
   e.classList.add("bounce");
-  console.log(e.target);
 };
 
 headerBounce(document.querySelector("h1"));
 
-const testUrl =()=> {
-  console.log(`Last part url ${urlName}`);
+isMobile();
+
+
+
+//show modal contact
+const modalHandle=()=> {
+  const aClass = new AddClass(modal, 'active'); 
+  aClass.checkClass()
 }
 
-isMobile();
+handleEvent(btnContact, 'click', modalHandle);
+handleEvent(btnClose,'click',modalHandle);

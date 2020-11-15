@@ -834,6 +834,13 @@ body {
     }
 }
 
+/*modal----------------!!!!*/
+.modal {
+    &.active {
+        display: block;
+    }
+}
+
 
 body {
     @include theme()
