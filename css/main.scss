@@ -832,10 +832,12 @@ body {
 /*modal----------------!!!!*/
 .modal {
 
-    &.active {
+ &.active {
         display: block;
         background-color: rgba(0, 0, 0, 0.9);
-    }
+        
+         }
+         
     .modal-content {
         background-color:$blue;
     }
