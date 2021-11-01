@@ -415,6 +415,10 @@ body {
   transition: 0.5s;
 }
 
+.footer .icons-main:nth-of-type(1) {
+  margin-right: 10px;
+}
+
 .footer__social {
   display: flex;
   justify-content: flex-end;
