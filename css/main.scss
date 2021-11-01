@@ -143,6 +143,12 @@ $icons: ( "property": "blue",
     }
 }
 
+@mixin media-medium {
+    @media (max-width: 991px) {
+        @content;
+    }
+}
+
 body {
     box-sizing: border-box;
     margin: 0;
@@ -369,7 +375,7 @@ body {
 .footer {
     height: 180px;
     background: $blue;
-    @include media-tablet {
+    @include media-tablet() {
         height: auto;
         padding: 15px 0;
     }
@@ -398,6 +404,9 @@ body {
                 color: #000;
                 transition: 0.5s;
             }
+        }
+        &:nth-of-type(1) {
+            margin-right: 10px;
         }
     }
     &__social {
