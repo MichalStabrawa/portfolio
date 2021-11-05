@@ -709,43 +709,52 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
   grid-gap: 15px;
   padding: 15px;
 }
 
 .grid-container .grid-item {
-  position: relative;
-  border: 1px solid #000;
+  background: #212122;
+  display: grid;
+  grid-template-columns: 60% auto;
+}
+
+.grid-container .grid-item:nth-of-type(even) {
+  grid-template-columns: 40% auto;
+  text-align: end;
 }
 
 .grid-container .grid-item img {
-  width: 100%;
+  max-width: 150px;
 }
 
 .grid-container .grid-item__content {
   padding: 15px;
   color: lightgrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .grid-container .grid-item__content h2 {
-  color: red;
+  color: #f0e3e3;
+}
+
+.grid-container .grid-item__content [class^="icon-"] {
+  font-size: 32px;
+  margin-top: 5px;
 }
 
 .grid-container .grid-item__mask {
-  width: 40%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: rgba(33, 33, 34, 0.8);
   padding: 15px;
 }
 
-.grid-container .grid-item__mask .mask-content {
-  height: 100%;
-  border: 1px solid #fff;
-  border-left: none;
+.grid-container .grid-item__figure {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*modal----------------!!!!*/
