@@ -1,5 +1,11 @@
-const btnMenu = document.querySelector(".btn-burger");
+import {isMobile,handleEvent} from "./js/ismobile.js";
+import AddClass from "./js/addclass.js";
+
+const btnMenu = document.querySelector(".burger");
+const btnContact = document.querySelector('.btn-contact');
 const navLinks = document.querySelectorAll(".left-navbar .menu-link");
+const modal = document.querySelector('.modal');
+const btnClose = document.querySelector('.close');
 const urlPath = window.location.pathname;
 const urlName = urlPath.slice(urlPath.lastIndexOf("/") + 1);
 
@@ -13,7 +19,6 @@ const startCounterHref = () => {
       element.classList.remove("active");
     }
   });
-  console.log(`winow href = ${window.location.pathname}`);
 };
 
 startCounterHref();
@@ -22,23 +27,23 @@ const classMenu = () => {
   const btnMenuSpan = document.querySelectorAll(".burger span");
   const leftMenu = document.querySelector(".left-navbar");
   leftMenu.classList.toggle("active");
+
   for (let i = 0; i < btnMenuSpan.length; i++)
     btnMenuSpan[i].classList.toggle("active");
 };
 
-document.querySelector(".burger").addEventListener("click", classMenu);
+handleEvent(btnMenu, 'click', classMenu);
 
 window.onscroll = () => {
   let nav = document.querySelector(".navbar-wrapper");
-  let burger = document.querySelector(".burger");
+
   if (window.pageYOffset > 100) {
-    this.console.log("Test");
     console.log(window.pageYOffset);
     nav.classList.add("nav-active");
-    burger.classList.add("bounce");
+    btnMenu.classList.add("bounce");
   } else {
     nav.classList.remove("nav-active");
-    burger.classList.remove("bounce");
+    btnMenu.classList.remove("bounce");
   }
 };
 
@@ -46,19 +51,19 @@ const navElements = document.querySelectorAll(".cards__item.main");
 //looping through each anchor element
 navElements.forEach(function (element) {
   //adding click event on each anchor element
-  element.addEventListener("mouseenter", function (e) {
+ handleEvent(element, 'mouseenter', function (e) {
     //stop default behaviour
     e.preventDefault();
 
     this.querySelector(".cards.main button.cards__item__btn").classList.add(
       "mystyle"
     );
-  });
+  })
 });
 
 navElements.forEach(function (element2) {
   //adding click event on each anchor element
-  element2.addEventListener("mouseleave", function (e) {
+  handleEvent(element2,'mouseleave', function (e) {
     //stop default behaviour
     e.preventDefault();
 
@@ -84,11 +89,18 @@ const aboutBounceRemove = () => {
 
 const headerBounce = (e) => {
   e.classList.add("bounce");
-  console.log(e.target);
 };
 
 headerBounce(document.querySelector("h1"));
 
-const testUrl =()=> {
-  console.log(`Last part url ${urlName}`);
+isMobile();
+
+//show & hide modal contact
+
+const modalHandle =()=> {
+  const useModalClass = new AddClass(modal, 'active'); 
+  useModalClass.checkClass()
 }
+
+handleEvent(btnContact, 'click', modalHandle);
+handleEvent(btnClose,'click',modalHandle);

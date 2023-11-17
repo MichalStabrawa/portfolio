@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Michal Stabrawa Portfolio Front End Developer</title>
-    <link rel="stylesheet" href="./bootstrap-4.4.1-dist/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="./bootstrap-4.4.1-dist/bootstrap-4.4.1-dist/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
     <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -36,7 +38,7 @@
                         <h1 class="animated ">MICHAL STABRAWA</h1>
                         <h2>FRONT END DEVELOPER</h2>
                         <div class="main-header__wrapper__butons">
-                            <button type="button" class="btn btn-outline-light btn-lg">CONTACT</button>
+                            <button type="button" class="btn btn-outline-light btn-lg btn-contact">CONTACT</button>
                         </div>
                     </div>
                 </div>
@@ -60,14 +62,18 @@
                     <figure>
                         <img src="img/skills.jpg">
                         <h2 class="cards__content">SKILLS</h2>
-                        <button class="cards__item__btn"><i class="fa fa-2x fa-plus" aria-hidden="true"></i></button>
+                        <button class="cards__item__btn">
+                            <a href="skills.html"><i class="fa fa-2x fa-plus" aria-hidden="true"></i></a>
+                        </button>
                     </figure>
                 </div>
                 <div class="col-lg-6 cards__item 2 main">
                     <figure>
                         <img src="img/experienc.jpg">
                         <h2 class="cards__content">EXPERIENCE</h2>
-                        <button class="cards__item__btn"><i class="fa fa-2x fa-plus" aria-hidden="true"></i></button>
+                        <button class="cards__item__btn">
+                            <a href="experience.html"><i class="fa fa-2x fa-plus" aria-hidden="true"></i></a>
+                        </button>
                     </figure>
                 </div>
             </div>
@@ -76,17 +82,18 @@
                     <figure>
                         <img src="img/university.jpg">
                         <h2 class="cards__content">EDUCATION</h2>
-                        <button class="cards__item__btn"><i class="fa fa-2x fa-plus" aria-hidden="true"></i></button>
-
+                        <button class="cards__item__btn">
+                            <a href="education.html"> <i class="fa fa-2x fa-plus" aria-hidden="true"></i></a>
+                        </button>
                     </figure>
-
                 </div>
                 <div class="col-lg-6 cards__item main">
                     <figure>
                         <img src="img/Bez-nazwy-1.png">
                         <h2 class="cards__content">PORTFOLIO</h2>
-                        <button class="cards__item__btn"><i class="fa fa-2x fa-plus" aria-hidden="true"></i></button>
-
+                        <button class="cards__item__btn">
+                            <a href="portfolio.html"><i class="fa fa-2x fa-plus" aria-hidden="true"></i></a>
+                        </button>
                     </figure>
                 </div>
             </div>
@@ -96,32 +103,49 @@
     <footer class="footer">
         <div class='container-fluid'>
             <div class="row">
-                <div class="col-lg-6 footer__social first-col">
-                    <a href="" class="footer__social__contact">
-                        <i class="fa fa-mobile" aria-hidden="true"></i>
-                        533197333
+                <div class="col-md-6 footer__social first-col">
+                    <a href="tel:+48533197333" class="footer__social__contact phone">
+                        <i class="fa fa-mobile" aria-hidden="true"></i> 533197333
                     </a>
                     <a href="" class="footer__social__contact">
-                        <i class="fa  fa-envelope" aria-hidden="true"></i>
-                        mistaaqua@gmail.com
+                        <i class="fa  fa-envelope" aria-hidden="true"></i> mistaaqua@gmail.com
                     </a>
-
                 </div>
-                <div class="col-lg-6 footer__social">
-
+                <div class="col-md-6 footer__social">
                     <span class="icons-main">
-                        <a href=""><i class="fa fa-2x fa-linkedin" aria-hidden="true"></i></a>
+                        <a
+                            href="https://www.linkedin.com/in/michal-stabrawa-48b408102?fbclid=IwAR2WRn-woy6-MeKNiN4Uy12RebFl2nWtZobQzH6x4tdpysZcA9pPRk0HdBc"><i
+                                class="fa fa-2x fa-linkedin" aria-hidden="true"></i></a>
                     </span>
                     <span class="icons-main">
-                        <a href=""><i class="fa fa-2x fa-github" aria-hidden="true"></i></a>
+                        <a href="https://github.com/MichalStabrawa"><i class="fa fa-2x fa-github"
+                                aria-hidden="true"></i></a>
                     </span>
                 </div>
 
             </div>
         </div>
     </footer>
+    <div class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">CONTACT</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://use.fontawesome.com/ae463a0245.js"></script>
-    <script src="main.js"></script>
+    <script src="main.js" type="module"></script>
 </body>
 
 </html>

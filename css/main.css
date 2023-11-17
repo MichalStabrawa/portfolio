@@ -8,7 +8,7 @@
 
 [class^="icon-"],
 [class*=" icon-"] {
-  font-family: 'icomoon';
+  font-family: "icomoon";
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -125,7 +125,7 @@ body {
 .left-navbar {
   height: 100vh;
   width: 300px;
-  background: #3D373B;
+  background: #3d373b;
   position: fixed;
   top: 0;
   z-index: 1000;
@@ -188,17 +188,17 @@ body {
   height: 5px;
   width: 50px;
   background: #fff;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .navbar-wrapper .burger span:nth-of-type(1).active {
   transform: translateY(10px) rotate(45deg);
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .navbar-wrapper .burger span:nth-of-type(2).active {
   transform: rotate(-45deg);
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .main-header {
@@ -283,7 +283,7 @@ body {
   border: 1px solid #000;
   background-color: rgba(0, 0, 0, 0.9);
   color: #fff;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .cards__item__btn:hover {
@@ -295,6 +295,10 @@ body {
   right: 0;
   transition: 0.5s;
   opacity: 1;
+}
+
+.cards__item__btn a {
+  color: #fff;
 }
 
 .cards__item:nth-child(odd) {
@@ -327,7 +331,7 @@ body {
 
 .cards figure img {
   width: 100%;
-  transition: linear .8s;
+  transition: linear 0.8s;
 }
 
 .cards figure img:hover {
@@ -353,7 +357,7 @@ body {
 }
 
 .cards__content::after {
-  content: '';
+  content: "";
   position: absolute;
   color: #fff;
   z-index: inherit;
@@ -402,13 +406,17 @@ body {
 }
 
 .footer .icons-main:hover {
-  opacity: .8;
+  opacity: 0.8;
   transition: 0.5s;
 }
 
 .footer .icons-main:hover i {
   color: #000;
   transition: 0.5s;
+}
+
+.footer .icons-main:nth-of-type(1) {
+  margin-right: 10px;
 }
 
 .footer__social {
@@ -502,7 +510,7 @@ body {
   top: 0;
   background: #000;
   opacity: 0.8;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .about-me .img-wrapper figure .mask:hover {
@@ -701,43 +709,62 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
   grid-gap: 15px;
   padding: 15px;
 }
 
 .grid-container .grid-item {
-  position: relative;
-  border: 1px solid #000;
+  background: #212122;
+  display: grid;
+  grid-template-columns: 60% auto;
+}
+
+.grid-container .grid-item:nth-of-type(even) {
+  grid-template-columns: 40% auto;
+  text-align: end;
 }
 
 .grid-container .grid-item img {
-  width: 100%;
+  max-width: 150px;
 }
 
 .grid-container .grid-item__content {
   padding: 15px;
   color: lightgrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .grid-container .grid-item__content h2 {
-  color: red;
+  color: #f0e3e3;
+}
+
+.grid-container .grid-item__content [class^="icon-"] {
+  font-size: 32px;
+  margin-top: 5px;
 }
 
 .grid-container .grid-item__mask {
-  width: 40%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: rgba(33, 33, 34, 0.8);
   padding: 15px;
 }
 
-.grid-container .grid-item__mask .mask-content {
-  height: 100%;
-  border: 1px solid #fff;
-  border-left: none;
+.grid-container .grid-item__figure {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*modal----------------!!!!*/
+.modal.active {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal .modal-content {
+  background-color: #47b8e2;
 }
 
 body .ms-theme-property {
