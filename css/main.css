@@ -757,6 +757,17 @@ body {
   align-items: center;
 }
 
+@media (max-width: 575px) {
+  .portfolio .grid-container .grid-item {
+    grid-template-columns: auto;
+  }
+}
+
+.portfolio .grid-container .grid-item__content [class^="icon-"] {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
 /*modal----------------!!!!*/
 .modal.active {
   display: block;
