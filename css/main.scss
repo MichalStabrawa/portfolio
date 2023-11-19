@@ -246,6 +246,10 @@ body {
   color: #fff;
   .btn {
     margin-top: 10px;
+
+    @include media-tablet {
+      margin-top:40px;
+    }
   }
   .container-fluid {
     height: 100%;
@@ -261,11 +265,15 @@ body {
       padding: 70px 0;
       justify-content: flex-start;
       align-items: center;
-      .btn {
-        background-color: rgba(0, 0, 0, 0.9);
+
+      h1 {
+        margin-top:13vh;
+        margin-bottom: 30px;
       }
     }
   }
+
+  
 }
 
 .about {
@@ -449,6 +457,7 @@ body {
   margin-bottom: 15px;
   background-color: $blue;
   color: $white;
+  padding-top: 4rem;
   .lead {
     width: 50%;
     @media (max-width: 768px) {
@@ -462,6 +471,7 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding-top:20px;
   }
   &__content {
     font-size: 24px;
@@ -475,6 +485,11 @@ body {
   .img-wrapper {
     display: flex;
     justify-content: flex-end;
+
+    @include media-medium {
+      justify-content: center;
+    }
+
     figure {
       position: relative;
       overflow: hidden;
