@@ -796,7 +796,17 @@ body {
 }
 
 .modal .modal-content {
-  background-color: #47b8e2;
+  background-color: #fff;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.modal .fa {
+  margin-right: 15px;
+}
+
+.modal .fa.fa-github {
+  color: #000;
 }
 
 body .ms-theme-property {

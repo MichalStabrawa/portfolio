@@ -765,7 +765,17 @@ body {
     background-color: rgba(0, 0, 0, 0.9);
   }
   .modal-content {
-    background-color: $blue;
+    background-color:#fff;
+    text-align: center;
+    font-size:2rem;
+  }
+
+  .fa {
+    margin-right: 15px;
+
+    &.fa-github {
+      color:#000;
+    }
   }
 }
 
