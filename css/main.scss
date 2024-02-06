@@ -248,7 +248,7 @@ body {
     margin-top: 10px;
 
     @include media-tablet {
-      margin-top:40px;
+      margin-top: 40px;
     }
   }
   .container-fluid {
@@ -267,13 +267,11 @@ body {
       align-items: center;
 
       h1 {
-        margin-top:13vh;
+        margin-top: 13vh;
         margin-bottom: 30px;
       }
     }
   }
-
-  
 }
 
 .about {
@@ -471,7 +469,7 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding-top:20px;
+    padding-top: 20px;
   }
   &__content {
     font-size: 24px;
@@ -702,9 +700,9 @@ body {
   .grid-item {
     background: rgba(33, 33, 34, 1);
     display: grid;
-    grid-template-columns: 60% auto;
+    grid-template-columns: 40% auto;
     &:nth-of-type(even) {
-      grid-template-columns: 40% auto;
+      grid-template-columns: 60% auto;
       text-align: end;
     }
     img {
@@ -743,9 +741,97 @@ body {
         grid-template-columns: auto;
 
         &:nth-of-type(even) {
-          h2 {}
+          h2 {
+          }
           .grid-item__mask {
             order: 1;
+          }
+        }
+      }
+      figure {
+        overflow: hidden;
+        z-index: 100;
+        background: linear-gradient(
+            90deg,
+            rgba(71, 184, 226, 1) 0%,
+            rgba(0, 0, 0, 0.5) 73%
+          ),
+          url("../img/budget-app.png") no-repeat;
+        background-size: cover;
+        transition: background-color 0.8s ease;
+
+        &:hover {
+          transition: linear;
+          transition-duration: 1s;
+          background: linear-gradient(
+              90deg,
+              rgba(71, 184, 226, 0.3) 0%,
+              rgba(0, 0, 0, 0.4) 73%
+            ),
+            url("../img/budget-app.png") no-repeat;
+          background-size: cover;
+        }
+      }
+      &:nth-of-type(2) {
+        figure {
+          background: linear-gradient(
+              90deg,
+              rgba(0, 176, 255, 1) 0%,
+              rgba(0, 0, 0, 0.2) 73%
+            ),
+            url("../img/hsbc1.png") no-repeat;
+          background-size: cover;
+
+          &:hover {
+            background: linear-gradient(
+                90deg,
+                rgba(0, 176, 255, 0.3) 0%,
+                rgba(0, 0, 0, 0.1) 73%
+              ),
+              url("../img/hsbc1.png") no-repeat;
+            background-size: cover;
+          }
+        }
+      }
+      &:nth-of-type(3) {
+        figure {
+          background: linear-gradient(
+              90deg,
+              rgba(0, 176, 255, 1) 0%,
+              rgba(0, 0, 0, 0.2) 73%
+            ),
+            url("../img/feed-destop.png") no-repeat;
+          background-size: cover;
+
+          &:hover {
+            transition-duration: 1s;
+            background: linear-gradient(
+                90deg,
+                rgba(0, 176, 255, 0.3) 0%,
+                rgba(0, 0, 0, 0.1) 73%
+              ),
+              url("../img/feed-destop.png") no-repeat;
+          }
+        }
+      }
+      &:nth-of-type(4) {
+        figure {
+          background: linear-gradient(
+              90deg,
+              rgba(0, 176, 255, 1) 0%,
+              rgba(0, 0, 0, 0.2) 73%
+            ),
+            url("../img/philips-landing.png") no-repeat;
+          background-size: cover;
+
+          &:hover {
+            transition-duration: 1s;
+            background: linear-gradient(
+                90deg,
+                rgba(0, 176, 255, 0.3) 0%,
+                rgba(0, 0, 0, 0.1) 73%
+              ),
+              url("../img/philips-landing.png") no-repeat;
           }
         }
       }
@@ -756,7 +842,9 @@ body {
     }
 
     .grid-item__content {
-h2 {text-align: left;}
+      h2 {
+        text-align: left;
+      }
     }
     p {
       text-align: left;
@@ -772,16 +860,16 @@ h2 {text-align: left;}
     background-color: rgba(0, 0, 0, 0.9);
   }
   .modal-content {
-    background-color:#fff;
+    background-color: #fff;
     text-align: center;
-    font-size:2rem;
+    font-size: 2rem;
   }
 
   .fa {
     margin-right: 15px;
 
     &.fa-github {
-      color:#000;
+      color: #000;
     }
   }
 }

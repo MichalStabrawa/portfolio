@@ -732,11 +732,11 @@ body {
 .grid-container .grid-item {
   background: #212122;
   display: grid;
-  grid-template-columns: 60% auto;
+  grid-template-columns: 40% auto;
 }
 
 .grid-container .grid-item:nth-of-type(even) {
-  grid-template-columns: 40% auto;
+  grid-template-columns: 60% auto;
   text-align: end;
 }
 
@@ -779,6 +779,51 @@ body {
   .portfolio .grid-container .grid-item:nth-of-type(even) .grid-item__mask {
     order: 1;
   }
+}
+
+.portfolio .grid-container .grid-item figure {
+  overflow: hidden;
+  z-index: 100;
+  background: linear-gradient(90deg, #47b8e2 0%, rgba(0, 0, 0, 0.5) 73%), url("../img/budget-app.png") no-repeat;
+  background-size: cover;
+  transition: background-color 0.8s ease;
+}
+
+.portfolio .grid-container .grid-item figure:hover {
+  transition: linear;
+  transition-duration: 1s;
+  background: linear-gradient(90deg, rgba(71, 184, 226, 0.3) 0%, rgba(0, 0, 0, 0.4) 73%), url("../img/budget-app.png") no-repeat;
+  background-size: cover;
+}
+
+.portfolio .grid-container .grid-item:nth-of-type(2) figure {
+  background: linear-gradient(90deg, #00b0ff 0%, rgba(0, 0, 0, 0.2) 73%), url("../img/hsbc1.png") no-repeat;
+  background-size: cover;
+}
+
+.portfolio .grid-container .grid-item:nth-of-type(2) figure:hover {
+  background: linear-gradient(90deg, rgba(0, 176, 255, 0.3) 0%, rgba(0, 0, 0, 0.1) 73%), url("../img/hsbc1.png") no-repeat;
+  background-size: cover;
+}
+
+.portfolio .grid-container .grid-item:nth-of-type(3) figure {
+  background: linear-gradient(90deg, #00b0ff 0%, rgba(0, 0, 0, 0.2) 73%), url("../img/feed-destop.png") no-repeat;
+  background-size: cover;
+}
+
+.portfolio .grid-container .grid-item:nth-of-type(3) figure:hover {
+  transition-duration: 1s;
+  background: linear-gradient(90deg, rgba(0, 176, 255, 0.3) 0%, rgba(0, 0, 0, 0.1) 73%), url("../img/feed-destop.png") no-repeat;
+}
+
+.portfolio .grid-container .grid-item:nth-of-type(4) figure {
+  background: linear-gradient(90deg, #00b0ff 0%, rgba(0, 0, 0, 0.2) 73%), url("../img/philips-landing.png") no-repeat;
+  background-size: cover;
+}
+
+.portfolio .grid-container .grid-item:nth-of-type(4) figure:hover {
+  transition-duration: 1s;
+  background: linear-gradient(90deg, rgba(0, 176, 255, 0.3) 0%, rgba(0, 0, 0, 0.1) 73%), url("../img/philips-landing.png") no-repeat;
 }
 
 .portfolio .grid-container .grid-item__content [class^="icon-"] {
