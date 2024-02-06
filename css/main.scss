@@ -743,7 +743,7 @@ body {
         grid-template-columns: auto;
 
         &:nth-of-type(even) {
-          text-align: start;
+          h2 {}
           .grid-item__mask {
             order: 1;
           }
@@ -753,6 +753,13 @@ body {
     .grid-item__content [class^="icon-"] {
       display: inline-block;
       margin-bottom: 10px;
+    }
+
+    .grid-item__content {
+h2 {text-align: left;}
+    }
+    p {
+      text-align: left;
     }
   }
 }

@@ -776,9 +776,6 @@ body {
   .portfolio .grid-container .grid-item {
     grid-template-columns: auto;
   }
-  .portfolio .grid-container .grid-item:nth-of-type(even) {
-    text-align: start;
-  }
   .portfolio .grid-container .grid-item:nth-of-type(even) .grid-item__mask {
     order: 1;
   }
@@ -787,6 +784,14 @@ body {
 .portfolio .grid-container .grid-item__content [class^="icon-"] {
   display: inline-block;
   margin-bottom: 10px;
+}
+
+.portfolio .grid-container .grid-item__content h2 {
+  text-align: left;
+}
+
+.portfolio .grid-container p {
+  text-align: left;
 }
 
 /*modal----------------!!!!*/
